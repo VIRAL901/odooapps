@@ -13,7 +13,7 @@
         'views/inherit_project_form.xml',
         'views/project_configuration.xml',
     ],
-    'images': ['static/description/banner.jpg'],
+    'images': ['static/description/banner.png'],
     'license': 'AGPL-3',
     'installable': True,
     'auto_install': False,
