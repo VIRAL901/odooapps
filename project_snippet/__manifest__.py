@@ -2,6 +2,7 @@
     'name': 'Project Snippet',
     'version': '17.0',
     'category': 'Website',
+    'author':'SPD Solution pvt.ltd.',
     'summary': """Instagram Feed Snippet.""",
     'description': """Project Snippet.""",
     'depends': ['website', 'sale_management','project'],

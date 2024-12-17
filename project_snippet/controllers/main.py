@@ -1,7 +1,5 @@
 from odoo import http
 from odoo.http import request
-import time
-
 
 class WebsiteSnippetPage(http.Controller):
 
