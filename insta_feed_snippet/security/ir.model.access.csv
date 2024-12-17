@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-insta_feed_snippet.access_project_configuration,access_project_configuration,insta_feed_snippet.model_project_configuration,base.group_user,1,1,1,1

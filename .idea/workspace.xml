@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b39ac0ed-b9c6-452c-a5f5-00c84afee89c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/controllers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/controllers/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/doc/RELEASE_NOTES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/models/inherit_project_project.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/models/project_configuration.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/security/ir.model.access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/icons/insta_feed_snippet_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/categories.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/check-box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/compass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/corporate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/customer-support.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/cybrosys-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/features.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/pictures.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/pie-chart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/right-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/support.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/misc/whatsapp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/modules/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/modules/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/modules/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/modules/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/modules/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/modules/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/screenshots/hero.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/screenshots/screenshot-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/screenshots/screenshot-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/screenshots/screenshot-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/screenshots/screenshot-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/assets/screenshots/screenshot-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/default_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/description/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/src/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/src/css/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/src/css/project_snippet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/src/img/carousel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/src/img/project_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/src/js/caroursel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/static/src/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/views/inherit_project_form.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/views/project_configuration.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/views/project_snippet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/insta_feed_snippet/views/search_snippet_templates.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2qLzX88XoRWrHA9qh22b3l7HK2Y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b39ac0ed-b9c6-452c-a5f5-00c84afee89c" name="Changes" comment="" />
+      <created>1734456680334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734456680334</updated>
+    </task>
+    <servers />
+  </component>
+</project>
