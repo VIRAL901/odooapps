@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="project_configuration_form" model="ir.ui.view">
+        <field name="name">project.configuration.form</field>
+        <field name="model">project.configuration</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="projects_per_row"/>
+                        <field name="total_projects_display"/>
+                        <field name="is_ascending_order"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="project_configuration_tree" model="ir.ui.view">
+        <field name="name">project.configuration.tree</field>
+        <field name="model">project.configuration</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="projects_per_row"/>
+                <field name="total_projects_display"/>
+                <field name="is_ascending_order"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_configuration_action" model="ir.actions.act_window">
+        <field name="name">Project Configuration</field>
+        <field name="res_model">project.configuration</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new project configuration
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="project_configuration_menu" sequence="90"  parent="project.menu_project_config" action="project_configuration_action"/>
+</odoo>

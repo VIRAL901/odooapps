@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="inherit_project_form" model="ir.ui.view">
+        <field name="name">inherit.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="website_publish" widget="boolean_toggle"/>
+                <field name="state" />
+            </field>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="before">
+                  <field name="project_image" widget="image" class="oe_avatar"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
