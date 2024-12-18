@@ -124,13 +124,10 @@ export class MapRenderer extends Component {
 
         const pinInSamePlace = {};
         for (const record of records) {
-//            const partner = record.partner;
             let latitude = Number(record.latitude)
             let longitude = Number(record.longitude)
-//            if (partner && partner.partner_latitude && partner.partner_longitude) {
             if (record && latitude && longitude) {
                 const lat_long = `${latitude}-${longitude}`;
-//                const lat_long = `${partner.partner_latitude}-${partner.partner_longitude}`;
                 const group = this.props.model.data.recordGroups ? `-${record.groupId}` : "";
                 const key = `${lat_long}${group}`;
                 if (key in markersInfo) {
@@ -167,20 +164,13 @@ export class MapRenderer extends Component {
             // Icon creation
             const iconInfo = {
                 className: "o-map-renderer--marker",
-                html: renderToString("web_view_leaflet_map.marker", params),
+                html: renderToString("spd_leaflet_map.marker", params),
             };
 
             const offset = markerInfo.pinInSamePlace * 0.000025;
             // Attach marker with icon and popup
             let latitude = Number(markerInfo.record.latitude)
             let longitude = Number(markerInfo.record.longitude)
-//            const marker = L.marker(
-//                [
-//                    markerInfo.record.partner.partner_latitude + offset,
-//                    markerInfo.record.partner.partner_longitude - offset,
-//                ],
-//                { icon: L.divIcon(iconInfo) }
-//            );
                const marker = L.marker(
                 [
                     latitude + offset,
@@ -238,22 +228,12 @@ export class MapRenderer extends Component {
      */
     createMarkerPopup(markerInfo, latLongOffset = 0) {
         const popupFields = this.getMarkerPopupFields(markerInfo);
-//        const partner = markerInfo.record.partner;
-//        const encodedAddress = encodeURIComponent(partner.contact_address_complete);
-        const popupHtml = renderToString("web_view_leaflet_map.markerPopup", {
+        const popupHtml = renderToString("spd_leaflet_map.markerPopup", {
             fields: popupFields,
             hasFormView: this.props.model.metaData.hasFormView,
-//            url: `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`,
         });
         let latitude  = Number(markerInfo.record.latitude)
         let longitude  = Number(markerInfo.record.longitude)
-//        const popup = L.popup({ offset: [0, -30] })
-//            .setLatLng([
-//                partner.partner_latitude + latLongOffset,
-//                partner.partner_longitude - latLongOffset,
-//            ])
-//            .setContent(popupHtml)
-//            .openOn(this.leafletMap);
         const popup = L.popup({ offset: [0, -30] })
             .setLatLng([
                 latitude + latLongOffset,
@@ -289,11 +269,8 @@ export class MapRenderer extends Component {
     getLatLng() {
         const tabLatLng = [];
         for (const record of this.props.model.data.records) {
-//            const partner = record.partner;
             let latitude = Number(record.latitude)
             let longitude = Number(record.longitude)
-//            if (partner && partner.partner_latitude && partner.partner_longitude) {
-//                tabLatLng.push(L.latLng(partner.partner_latitude, partner.partner_longitude));
 //            }
             if (record && latitude && longitude) {
                 tabLatLng.push(L.latLng(latitude, longitude));
@@ -314,17 +291,6 @@ export class MapRenderer extends Component {
     getMarkerPopupFields(markerInfo) {
         const record = markerInfo.record;
         const fieldsView = [];
-        // Only display address in multi coordinates marker popup
-//        if (markerInfo.ids.length > 1) {
-//            if (!this.props.model.metaData.hideAddress) {
-//                fieldsView.push({
-//                    id: this.nextId++,
-//                    value: 'test',//record.partner.contact_address_complete,
-//                    string: _t("Address"),
-//                });
-//            }
-//            return fieldsView;
-//        }
         if (!this.props.model.metaData.hideName) {
             fieldsView.push({
                 id: this.nextId++,
@@ -332,31 +298,8 @@ export class MapRenderer extends Component {
                 string: _t("Name"),
             });
         }
-//        if (!this.props.model.metaData.hideAddress) {
-//            fieldsView.push({
-//                id: this.nextId++,
-//                value: record.partner.contact_address_complete,
-//                string: _t("Address"),
-//            });
-//        }
         const fields = this.props.model.metaData.fields;
-//        for (const field of this.props.model.metaData.fieldNamesMarkerPopup) {
-//            if (record[field.fieldName]) {
-//                let value = record[field.fieldName];
-//                if (fields[field.fieldName].type === "many2one") {
-//                    value = record[field.fieldName].display_name;
-//                } else if (["one2many", "many2many"].includes(fields[field.fieldName].type)) {
-//                    value = record[field.fieldName]
-//                        ? record[field.fieldName].map((r) => r.display_name).join(", ")
-//                        : "";
-//                }
-//                fieldsView.push({
-//                    id: this.nextId++,
-//                    value,
-//                    string: field.string,
-//                });
-//            }
-//        }
+
         return fieldsView;
     }
     /**
@@ -365,19 +308,11 @@ export class MapRenderer extends Component {
     get googleMapUrl() {
         let url = "https://www.google.com/maps/dir/?api=1";
         if (this.props.model.data.records.length) {
-//            const allCoordinates = this.props.model.data.records.filter(
-//                ({ partner }) => partner && partner.partner_latitude && partner.partner_longitude
-//            );
+
             const allCoordinates = this.props.model.data.records.filter(
                 ({ latitude,longitude }) => latitude && longitude &&  Number(latitude) && Number(longitude)
             );
-//            const uniqueCoordinates = allCoordinates.reduce((coords, { partner }) => {
-//                const coord = partner.partner_latitude + "," + partner.partner_longitude;
-//                if (!coords.includes(coord)) {
-//                    coords.push(coord);
-//                }
-//                return coords;
-//            }, []);
+
             const uniqueCoordinates = allCoordinates.reduce((coords, { latitude,longitude }) => {
                 const coord = Number(latitude) + "," + Number(longitude);
                 if (!coords.includes(coord)) {
@@ -439,16 +374,12 @@ export class MapRenderer extends Component {
      */
     async centerAndOpenPin(record) {
         this.state.expendedPinList = false;
-        // wait the next owl render to avoid marker popup create => destroy
         await delay(0);
         const popup = this.createMarkerPopup({
             record: record,
             ids: [record.id],
         });
-//        const px = this.leafletMap.project([
-//            record.partner.partner_latitude,
-//            record.partner.partner_longitude,
-//        ]);
+
        let latitude = Number(record.latitude)
        let longitude = Number(record.longitude)
         const px = this.leafletMap.project([

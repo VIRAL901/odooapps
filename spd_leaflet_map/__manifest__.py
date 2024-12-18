@@ -19,7 +19,7 @@ This module integrates the Leaflet.js library with Odoo 17, allowing you to add 
     ],
     "assets": {
         "web.assets_backend": [
-            "web_view_leaflet_map/static/src/**/*",
+            "spd_leaflet_map/static/src/**/*",
         ],
     },
     "images": [

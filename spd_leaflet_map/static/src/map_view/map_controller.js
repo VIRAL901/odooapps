@@ -35,10 +35,8 @@ export class MapController extends Component {
 
         onWillStart(() =>
             Promise.all([
-                loadJS("/web_view_leaflet_map/static/lib/leaflet/leaflet.js"),
-                loadCSS("/web_view_leaflet_map/static/lib/leaflet/leaflet.css"),
-//                loadCSS('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'),
-//                loadJS('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'),
+                loadJS("/spd_leaflet_map/static/lib/leaflet/leaflet.js"),
+                loadCSS("/spd_leaflet_map/static/lib/leaflet/leaflet.css"),
             ])
         );
 
@@ -86,7 +84,7 @@ export class MapController extends Component {
     }
 }
 
-MapController.template = "web_view_leaflet_map.MapView";
+MapController.template = "spd_leaflet_map.MapView";
 
 MapController.components = {
     Layout,

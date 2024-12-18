@@ -16,7 +16,7 @@ export const mapView = {
     Renderer: MapRenderer,
     Model: MapModel,
     ArchParser: MapArchParser,
-    buttonTemplate:  "web_view_leaflet_map.MapView.Buttons",
+    buttonTemplate:  "spd_leaflet_map.MapView.Buttons",
 
     props: (genericProps, view, config) => {
         let modelParams = genericProps.state;

@@ -29,13 +29,6 @@ export class MapArchParser {
     }
 
     visitMap(node, archInfo) {
-//        archInfo.resPartnerField = node.getAttribute("res_partner");
-//        archInfo.latitudeField = node.getAttribute("field_latitude");
-//        archInfo.longitudeField = node.getAttribute("field_longitude");
-
-//        archInfo.fieldNames.push(archInfo.resPartnerField);
-//        archInfo.fieldNames.push(archInfo.latitudeField);
-//        archInfo.fieldNames.push(archInfo.longitudeField);
 
         if (node.hasAttribute("limit")) {
             archInfo.limit = parseInt(node.getAttribute("limit"), 10);
