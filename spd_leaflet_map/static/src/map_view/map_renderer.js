@@ -416,7 +416,7 @@ export class MapRenderer extends Component {
     }
 }
 
-MapRenderer.template = "web_map.MapRenderer";
+MapRenderer.template = "spd_leaflet_map.MapRenderer";
 MapRenderer.props = {
     model: Object,
     onMarkerClick: Function,
