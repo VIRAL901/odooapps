@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Face Recognition Attendance System in Odoo17",
+    'name': "Face Capture Attendance System in Odoo17",
     'summary': """
         This module enhances security by capturing employee images during manual check-in and check-out times,
         displaying the captured image on the employee attendance line.
