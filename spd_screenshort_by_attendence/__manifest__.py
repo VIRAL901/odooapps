@@ -10,7 +10,7 @@
         This module uses video streaming to capture images for attendance tracking and employee verification.
         The system captures images at both check-in and check-out.
     """,
-    'images': ['static/description/banner.jpg'],
+    'images': ['static/description/banner.png'],
     'author': 'SPD Solutions Pvt. Ltd.',
     'category': 'Human Resources',
     'version': '17.0.0.1',
