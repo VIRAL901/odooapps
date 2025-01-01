@@ -1,5 +1,5 @@
 {
-    'name': 'Many2many Filter in Task',
+    'name': 'Many2many Filter in Task(Calendar View)',
     'version': '17.0.0.1',
     'category': 'Extra Tools',
     'author': "SPD Solutions Pvt. Ltd.",
