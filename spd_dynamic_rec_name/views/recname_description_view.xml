@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="recname_description_form" model="ir.ui.view">
+        <field name="name">Recname.description.form</field>
+        <field name="model">recname.description</field>
+        <field name="arch" type="xml">
+            <form string="Tags">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_id"/>
+                            <field name="field_ids" widget="many2many_tags"/>
+<!--                            <field name="field_ids" widget="many2many_tags" domain="['|',('ttype', '!=', 'char'),('ttype', '!=', 'text'),('ttype', '!=', 'integer'),  ('ttype', '!=', 'float'),('ttype', '!=', 'many2one')]" />-->
+                            <field name="seprator" string="separate with"/>
+                        </group>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="recname_description_tree" model="ir.ui.view">
+        <field name="name">Recname.description.tree</field>
+        <field name="model">recname.description</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_recname_description_list" model="ir.actions.act_window">
+        <field name="name">Recname Description</field>
+        <field name="res_model">recname.description</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="recname_desc_root_menu" name="Custom Record Name"/>
+    <menuitem id="recname_desc_create_name" name="Create Recname"
+        action="spd_dynamic_rec_name.action_recname_description_list"
+        parent="spd_dynamic_rec_name.recname_desc_root_menu"/>
+</odoo>
