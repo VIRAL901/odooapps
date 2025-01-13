@@ -8,7 +8,6 @@
             <field name="code">model.generate_leads('weekly')</field>
             <field name="interval_type">weeks</field>
             <field name="interval_number">1</field>
-            <field name="numbercall">-1</field>
             <field name="active">True</field>
         </record>
 
@@ -20,7 +19,6 @@
             <field name="code">model.generate_leads('monthly')</field>
             <field name="interval_type">months</field>
             <field name="interval_number">1</field>
-            <field name="numbercall">-1</field>
             <field name="active">True</field>
         </record>
 
@@ -32,7 +30,6 @@
             <field name="code">model.generate_leads('yearly')</field>
             <field name="interval_type">months</field>
             <field name="interval_number">12</field>
-            <field name="numbercall">-1</field>
             <field name="active">True</field>
         </record>
     </data>
