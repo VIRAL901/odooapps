@@ -5,10 +5,8 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <field name="vat" position="after">
-                <group>
-                    <field name="auto_generate_lead"/>
-                    <field name="lead_generation_interval" invisible="auto_generate_lead == False"/>
-                </group>
+                <field name="auto_generate_lead"/>
+                <field name="lead_generation_interval" attrs="{'invisible': [('auto_generate_lead', '=', False)]}"/>
             </field>
         </field>
     </record>
