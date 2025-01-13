@@ -1,0 +1,36 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Weekly Cron -->
+        <record id="ir_cron_generate_weekly_so" model="ir.cron">
+            <field name="name">Generate Weekly Sale Order</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+            <field name="code">model.generate_leads('weekly')</field>
+            <field name="interval_type">weeks</field>
+            <field name="interval_number">1</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Monthly Cron -->
+        <record id="ir_cron_generate_monthly_so" model="ir.cron">
+            <field name="name">Generate Monthly Sale Order</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+            <field name="code">model.generate_leads('monthly')</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">1</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Yearly Cron -->
+        <record id="ir_cron_generate_yearly_so" model="ir.cron">
+            <field name="name">Generate Yearly Sale Order</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="state">code</field>
+            <field name="code">model.generate_leads('yearly')</field>
+            <field name="interval_type">months</field>
+            <field name="interval_number">12</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

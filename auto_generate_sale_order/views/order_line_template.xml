@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="order_line_template_form" model="ir.ui.view">
+        <field name="name">order.line.template.form</field>
+        <field name="model">order.line.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="partner_id" required="1"/>
+                    </group>
+                    <notebook>
+                    <page string="Order Lines">
+                        <field name="order_line_ids">
+                            <list>
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="price"/>
+                                <field name="total"/>
+                            </list>
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <field name="quantity"/>
+                                        <field name="price"/>
+                                        <field name="total"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </notebook>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="order_line_template_tree" model="ir.ui.view">
+        <field name="name">order.line.template.tree</field>
+        <field name="model">order.line.template</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="partner_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="order_line_template_action">
+        <field name="name">Order Template</field>
+        <field name="res_model">order.line.template</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="order_line_template_menu" name="Order Template" sequence="21" action="order_line_template_action"/>
+</odoo>
