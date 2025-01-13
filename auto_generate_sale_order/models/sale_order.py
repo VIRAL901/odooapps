@@ -3,7 +3,7 @@ from odoo import models,fields
 class InheritCrmLead(models.Model):
     _inherit='sale.order'
 
-    def generate_leads(self, interval):
+    def generate_so(self, interval):
         partners = self.env['res.partner'].search([
             ('auto_generate_sale_order', '=', True),
             ('so_generation_interval', '=', interval)
