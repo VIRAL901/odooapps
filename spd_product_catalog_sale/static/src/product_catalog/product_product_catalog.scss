@@ -1,0 +1,140 @@
+/* General Styling for Kanban Cards */
+.o_product_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.o_product_card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image Styling */
+.o_product_image_container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.o_product_image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.o_product_image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Details */
+.o_product_details {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.o_product_title {
+    font-size: 1.5rem; /* Adjusted */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.o_product_price {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.2rem; /* Adjusted */
+    color: #495057;
+}
+
+/* Quantity Control */
+.o_product_quantity_control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.o_qty_button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.o_qty_button:hover {
+    background-color: #0056b3;
+}
+
+.o_qty_decrease {
+    background-color: #dc3545;
+}
+
+.o_qty_decrease:hover {
+    background-color: #c82333;
+}
+
+.o_qty_increase {
+    background-color: #28a745;
+}
+
+.o_qty_increase:hover {
+    background-color: #218838;
+}
+
+.o_qty_input {
+    width: 60px; /* Adjusted */
+    text-align: center;
+    font-size: 1.2rem; /* Adjusted */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.4rem; /* Adjusted */
+}
+
+/* Action Buttons */
+.o_product_action_buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.o_product_action_buttons .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    color: white;
+    border: none;
+}
+
+.o_product_action_buttons .btn-secondary {
+    background-color: #28a745;
+}
+
+.o_product_action_buttons .btn-secondary:hover {
+    background-color: #218838;
+}
+
+.o_product_action_buttons .btn-secondary[name="action_remove_product_so_line"] {
+    background-color: #dc3545;
+}
+
+.o_product_action_buttons .btn-secondary[name="action_remove_product_so_line"]:hover {
+    background-color: #c82333;
+}

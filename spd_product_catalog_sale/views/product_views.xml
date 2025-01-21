@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_view_kanban_catalog" model="ir.ui.view">
+    <field name="name">product.product.view.kanban</field>
+    <field name="model">product.product</field>
+    <field name="arch" type="xml">
+        <kanban edit="0" class="o_kanban_mobile o_cart_kanban">
+            <field name="id"/>
+            <field name="name"/>
+            <field name="product_template_attribute_value_ids"/>
+            <field name="sale_catalog_quantity"/>
+            <templates>
+                <t t-name="kanban-box">
+                    <div class="o_product_card">
+                        <!-- Product Image -->
+                        <div class="o_product_image_container">
+                            <img t-att-src="kanban_image('product.product', 'image_128', record.id.raw_value)"
+                                 alt="Product" class="o_product_image"/>
+                        </div>
+
+                        <!-- Product Details -->
+                        <div class="o_product_details">
+                            <div class="o_product_title">
+                                <field name="priority" widget="priority"/>
+                                <strong><span t-out="record.name.value"/></strong>
+                            </div>
+                            <div>
+                                <field name="product_template_attribute_value_ids" groups="product.group_product_variant"/>
+                            </div>
+                            <div class="o_product_price">
+                                <strong>Price:</strong>
+                                <field name="standard_price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                <field name="currency_id"/>
+                            </div>
+                        </div>
+
+                        <!-- Quantity Control -->
+                        <div class="o_product_quantity_control" t-if="record.sale_catalog_quantity.raw_value">
+                            <button class="o_qty_button o_qty_decrease" name="action_btn_remove_quantity" type="object">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                            <field name="sale_catalog_quantity" widget="sale_cart_product_quantity" class="o_qty_input"/>
+                            <button class="o_qty_button o_qty_increase" name="action_btn_add_quantity" type="object">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="o_product_action_buttons">
+                            <button class="btn btn-secondary" t-if="record.sale_catalog_quantity.raw_value"
+                                    name="action_remove_product_so_line" type="object">
+                                <i class="fa fa-trash"></i> Remove
+                            </button>
+                            <button class="btn btn-secondary" t-if="!record.sale_catalog_quantity.raw_value"
+                                    name="action_add_product_so_line" type="object">
+                                <i class="fa fa-shopping-cart"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+    </field>
+</record>
+
+
+<!--    <record id="product_view_kanban_catalog" model="ir.ui.view">-->
+<!--        <field name="name">product.product.view.kanban</field>-->
+<!--        <field name="model">product.product</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <kanban edit="0" class="o_kanban_mobile o_cart_kanban">-->
+<!--                <field name="id"/>-->
+<!--                <field name="name"/>-->
+<!--                <field name="product_template_attribute_value_ids"/>-->
+<!--                <field name="sale_catalog_quantity"/>-->
+<!--                <templates>-->
+<!--                    <t t-name="kanban-box">-->
+<!--                        <div class="o_product_quantity d-flex flex-column justify-content-between"-->
+<!--                             style="min-height: 100px">-->
+<!--                            <div class="o_dropdown_kanban dropdown" t-if="!selection_mode">-->
+<!--                                <a role="button" class="dropdown-toggle o-no-caret btn" data-bs-toggle="dropdown"-->
+<!--                                   data-bs-display="static" href="#" aria-label="Dropdown menu" title="Dropdown menu">-->
+<!--                                    <span class="fa fa-ellipsis-v"/>-->
+<!--                                </a>-->
+<!--                                <div class="dropdown-menu" role="menu">-->
+<!--                                    <button class="dropdown-item" name="action_open_product_edit_kanban" role="menuitem"-->
+<!--                                            type="object" groups="sales_team.group_sale_manager">Modifier-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="o_kanban_image image_class">-->
+<!--                                <img t-att-src="kanban_image('product.product', 'image_128', record.id.raw_value)"-->
+<!--                                     alt="Product" class="o_image_64_contain"/>-->
+<!--                            </div>-->
+<!--                            <div class="oe_kanban_details p-2 d-flex">-->
+<!--                                <div class="o_kanban_record_top flex-column w-100 "-->
+<!--                                     style="justify-content: space-between;">-->
+<!--                                    <div class="product_info">-->
+<!--                                        <div class="o_kanban_record_title">-->
+<!--                                            <field class="me-1" name="priority" widget="priority"/>-->
+<!--                                            <strong>-->
+<!--                                                <span t-out="record.name.value"/>-->
+<!--                                            </strong>-->
+<!--                                        </div>-->
+<!--                                        <div class="o_kanban_tags_section">-->
+<!--                                            <field name="product_template_attribute_value_ids"-->
+<!--                                                   groups="product.group_product_variant"/>-->
+<!--                                        </div>-->
+<!--                                        <div class="d-flex w-100 justify-content-between align-items-center">-->
+<!--                                            <ul class="d-flex m-0 p-0 align-items-center">-->
+<!--                                                <li class="me-2">-->
+<!--                                                    <strong>Price:</strong>-->
+<!--                                                </li>-->
+<!--                                                <li class="me-2">-->
+<!--                                                    <field name="standard_price" widget="monetary"-->
+<!--                                                           options="{'currency_field': 'currency_id'}"></field>-->
+<!--                                                </li>-->
+<!--                                                <li>-->
+<!--                                                    <field name="currency_id"></field>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+
+<!--                                    </div>-->
+<!--                                    <div t-if="record.sale_catalog_quantity.raw_value" name="_quantity"-->
+<!--                                         class="h-100 ml-2 d-flex align-items-center o_product_quantity o_field_widget o_quick_editable"-->
+<!--                                         style="z-index:1;align-items: center;">-->
+<!--                                        <button id="add_quantity"-->
+<!--                                                class="btn d-flex align-items-center justify-content-center o_qty_button btn-primary text-muted"-->
+<!--                                                type="object" name="action_btn_remove_quantity">-->
+<!--                                            <i class="fa fa-minus center"/>-->
+<!--                                        </button>-->
+<!--                                        <field name="sale_catalog_quantity" class="o_product_quantity"-->
+<!--                                               widget="sale_cart_product_quantity"></field>-->
+<!--                                        <button id="remove_quantity"-->
+<!--                                                class="btn d-flex align-items-center justify-content-center o_qty_button btn-primary text-muted"-->
+<!--                                                type="object" name="action_btn_add_quantity">-->
+<!--                                            <i class="fa fa-plus"/>-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+<!--                                    <div t-if="record.sale_catalog_quantity.raw_value"-->
+<!--                                         class="ms-auto o_product_catalog_buttons o_product_catalog_cancel_global_click"-->
+<!--                                         style="min-width: max-content;">-->
+<!--                                        <button class="btn btn-secondary" type="object"-->
+<!--                                                name="action_remove_product_so_line">-->
+<!--                                            <i class="fa fa-trash"></i>-->
+<!--                                            Remove-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+<!--                                    <div t-if="!record.sale_catalog_quantity.raw_value"-->
+<!--                                         class="ms-auto o_product_catalog_buttons o_product_catalog_cancel_global_click"-->
+<!--                                         style="min-width: max-content;">-->
+<!--                                        <button class="btn btn-secondary" type="object"-->
+<!--                                                name="action_add_product_so_line">-->
+<!--                                            <i class="fa fa-shopping-cart"></i>-->
+<!--                                            Add-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </templates>-->
+<!--            </kanban>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="product_view_search_catalog" model="ir.ui.view">
+        <field name="name">product.view.search.catalog</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <search string="Product">
+                <!-- Search field -->
+                <field name="name"
+                       string="Product"
+                       filter_domain="['|', '|', ('default_code', 'ilike', self), ('name', 'ilike', self), ('barcode', 'ilike', self)]"/>
+                <field name="categ_id" filter_domain="[('categ_id', 'child_of', raw_value)]"/>
+                <field name="product_template_attribute_value_ids"
+                       groups="product.group_product_variant"/>
+                <field name="product_tmpl_id" string="Product Template"/>
+                <!-- Filter -->
+                <filter string="Favorites" name="favorites" domain="[('priority', '=', '1')]"/>
+                <separator/>
+                <filter string="Services" name="services" domain="[('type', '=', 'service')]"/>
+                <filter string="Products"
+                        name="products"
+                        domain="[('type', 'in', ['consu', 'product'])]"/>
+                <!-- Group By -->
+                <group expand="1" string="Group By">
+                    <filter string="Product Type" name="type" context="{'group_by':'type'}"/>
+                    <filter string="Product Category"
+                            name="categ_id"
+                            context="{'group_by':'categ_id'}"/>
+                </group>
+                <!-- searchpanel -->
+                <searchpanel>
+                    <field name="categ_id"
+                           string="Product Category"
+                           icon="fa-th-list"/>
+                    <field name="product_template_attribute_value_ids"
+                           string="Attributes"
+                           icon="fa-th-list"
+                           domain="[('ptav_active', '=', True), ('product_tmpl_id.active', '=', True)]"
+                           enable_counters="1"
+                           select="multi"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+</odoo>
