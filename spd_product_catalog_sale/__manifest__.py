@@ -1,5 +1,5 @@
 {
-    "name": "Product Catalog in Odoo16",
+    "name": "Product Catalog in Sales Odoo16",
     "version": "16.0.1.0.0",
     "category": "Sales/Sales",
     "summary": "Easily manage products in sales orders directly from the product kanban view.",
