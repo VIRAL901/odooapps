@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_view_kanban_catalog" model="ir.ui.view">
+        <field name="name">product.product.view.kanban</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <kanban edit="0" class="o_kanban_mobile o_cart_kanban">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="product_template_attribute_value_ids"/>
+                <field name="purchase_catalog_quantity"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="o_product_card">
+                            <!-- Product Image -->
+                            <div class="o_product_image_container">
+                                <img t-att-src="kanban_image('product.product', 'image_128', record.id.raw_value)"
+                                     alt="Product" class="o_product_image"/>
+                            </div>
+
+                            <!-- Product Details -->
+                            <div class="o_product_details">
+                                <div class="o_product_title">
+                                    <field name="priority" widget="priority"/>
+                                    <strong>
+                                        <span t-out="record.name.value"/>
+                                    </strong>
+                                </div>
+                                <div>
+                                    <field name="product_template_attribute_value_ids"
+                                           groups="product.group_product_variant"/>
+                                </div>
+                                <div class="o_product_price">
+                                    <strong>Price:</strong>
+                                    <field name="standard_price" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="currency_id"/>
+                                </div>
+                            </div>
+
+                            <!-- Quantity Control -->
+                            <div class="o_product_quantity_control" t-if="record.purchase_catalog_quantity.raw_value">
+                                <button class="o_qty_button o_qty_decrease" name="action_btn_remove_quantity"
+                                        type="object">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                                <field name="purchase_catalog_quantity" widget="purchase_cart_product_quantity"
+                                       class="o_qty_input"/>
+                                <button class="o_qty_button o_qty_increase" name="action_btn_add_quantity"
+                                        type="object">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="o_product_action_buttons">
+                                <button class="btn btn-secondary" t-if="record.purchase_catalog_quantity.raw_value"
+                                        name="action_remove_product_so_line" type="object">
+                                    <i class="fa fa-trash"></i>
+                                    Remove
+                                </button>
+                                <button class="btn btn-secondary" t-if="!record.purchase_catalog_quantity.raw_value"
+                                        name="action_add_product_so_line" type="object">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="product_view_search_catalog" model="ir.ui.view">
+        <field name="name">product.view.search.catalog</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <search string="Product">
+                <!-- Search field -->
+                <field name="name"
+                       string="Product"
+                       filter_domain="['|', '|', ('default_code', 'ilike', self), ('name', 'ilike', self), ('barcode', 'ilike', self)]"/>
+                <field name="categ_id" filter_domain="[('categ_id', 'child_of', raw_value)]"/>
+                <field name="product_template_attribute_value_ids"
+                       groups="product.group_product_variant"/>
+                <field name="product_tmpl_id" string="Product Template"/>
+                <!-- Filter -->
+                <filter string="Favorites" name="favorites" domain="[('priority', '=', '1')]"/>
+                <separator/>
+                <filter string="Services" name="services" domain="[('type', '=', 'service')]"/>
+                <filter string="Products"
+                        name="products"
+                        domain="[('type', 'in', ['consu', 'product'])]"/>
+                <!-- Group By -->
+                <group expand="1" string="Group By">
+                    <filter string="Product Type" name="type" context="{'group_by':'type'}"/>
+                    <filter string="Product Category"
+                            name="categ_id"
+                            context="{'group_by':'categ_id'}"/>
+                </group>
+                <!-- searchpanel -->
+                <searchpanel>
+                    <field name="categ_id"
+                           string="Product Category"
+                           icon="fa-th-list"/>
+                    <field name="product_template_attribute_value_ids"
+                           string="Attributes"
+                           icon="fa-th-list"
+                           domain="[('ptav_active', '=', True), ('product_tmpl_id.active', '=', True)]"
+                           enable_counters="1"
+                           select="multi"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+</odoo>
