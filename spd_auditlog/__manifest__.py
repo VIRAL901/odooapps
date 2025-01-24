@@ -1,5 +1,5 @@
 {
-    "name": "Audit Log",
+    "name": "Audit Log in Odoo18",
     "summary": "Track and monitor user actions, HTTP sessions, and requests in Odoo 18.0.",
     "version": "18.0.1.0.0",
     "category": "Tools",
