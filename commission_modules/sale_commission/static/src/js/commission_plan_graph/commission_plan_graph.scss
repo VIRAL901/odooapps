@@ -1,0 +1,9 @@
+.o_commission_graph {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .o_form_view .o_inner_group {
+         /* grid-template-columns: auto minmax(0, 1fr); */
+    }
+}
