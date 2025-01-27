@@ -1,12 +1,12 @@
 {
-    'name': 'Sales Commission in Odoo17',
+    'name': 'Sales Commissions in Odoo17',
     'version': '17.0',
     'category': 'Sales/Commission',
     'sequence': 1,
-    'summary': "Manage your salespersons' commissions in Odoo17",
+    'summary': "Manage your salespersons,commissions,commissions achievements,commission plans also you can see reporting of commissions in Odoo17",
     'description': """
     """,
-    'depends': ['sale_management','sale_subscription'],
+    'depends': ['sale_management', 'sale_subscription'],
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
@@ -25,8 +25,11 @@
     ],
     'installable': True,
     'license': 'OEEL-1',
-    'price':5,
-    'currency':'USD',
+    'price': 5,
+    'currency': 'USD',
+    'author': 'SPD Solutions Pvt. Ltd.',
+    'company': 'SPD Solutions Pvt. Ltd.',
+    'maintainer': 'SPD Solutions Pvt. Ltd.',
     'assets': {
         'web.assets_backend': [
             'spd_sale_commission/static/src/js/commission_plan_graph/commission_plan_graph.js',
