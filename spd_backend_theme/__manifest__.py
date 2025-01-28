@@ -19,6 +19,7 @@
     'company': 'SPD Solutions Pvt. Ltd.',
     'maintainer': 'SPD Solutions Pvt. Ltd.',
     'license':'LGPL-3',
+    'images': ["static/description/banner.png"],
     "auto_install": False,
     "installable": True,
 }
