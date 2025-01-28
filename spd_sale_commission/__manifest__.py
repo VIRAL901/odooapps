@@ -24,7 +24,7 @@
         'data/sale_commission_demo.xml'
     ],
     'installable': True,
-    'license': 'OEEL-1',
+    'license': 'LGPL-3',
     'price': 5,
     'currency': 'USD',
     'author': 'SPD Solutions Pvt. Ltd.',
