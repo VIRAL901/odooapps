@@ -25,6 +25,9 @@
     ],
     'installable': True,
     'license': 'OPL-1',
+    "images": [
+        "static/description/banner.png",
+    ],
     'price': 5,
     'currency': 'USD',
     'author': 'SPD Solutions Pvt. Ltd.',
