@@ -24,7 +24,7 @@
         'data/sale_commission_demo.xml'
     ],
     'installable': True,
-    'license': 'LGPL-3',
+    'license': 'OPL-1',
     'price': 5,
     'currency': 'USD',
     'author': 'SPD Solutions Pvt. Ltd.',
