@@ -25,7 +25,7 @@ Key Features:
             "spd_product_catalog_sale/static/src/**/*"
         ],
     },
-    "images": ["static/description/banner.png"],
+    "images": ["static/description/banner.jpg"],
     "license": "LGPL-3",
     "installable": True,
     "application": False,
