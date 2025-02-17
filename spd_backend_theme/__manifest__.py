@@ -13,8 +13,6 @@
         ],
     },
     'qweb': [],
-    'price': 15,
-    'currency': 'USD',
     'author': 'SPD Solutions Pvt. Ltd.',
     'company': 'SPD Solutions Pvt. Ltd.',
     'maintainer': 'SPD Solutions Pvt. Ltd.',
