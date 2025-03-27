@@ -25,8 +25,7 @@
     'version': '17.0',
     "license": "LGPL-3",
     "category": "Extra Tools",
-    'author': 'Creyox Technologies',
-    'website': 'https://creyox.com',
+    'author': 'SPD Solutions Pvt. Ltd.',
     'uninstall_hook': '_user_notify_uninstall_hook',
     'depends': ['web', 'bus', 'base', 'mail', 'base_automation'],
     'data': [
