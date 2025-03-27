@@ -15,6 +15,9 @@
             'spd_sale_order_line_extend/static/src/**/*',
         ],
     },
+    "images": [
+        "static/description/banner.png",
+    ],
     'installable': True,
     'application': True,
     'auto_install': False,
