@@ -21,6 +21,9 @@
         'views/project_project_view.xml',
         'views/project_project_sharing_kanban_view.xml',
     ],
+    "images": [
+        "static/description/banner.png",
+    ],
     'assets': {
         'spd_portal_project_view.webclient': [
             ('include', 'web._assets_helpers'),
