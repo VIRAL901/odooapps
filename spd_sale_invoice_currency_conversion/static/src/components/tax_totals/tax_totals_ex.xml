@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="account.TaxTotalField" t-inherit="account.TaxTotalsField" t-inherit-mode="extension">
+        <xpath expr="//table/tbody/tr[last()]" position="after">
+            <tr t-if="this.model == 'sale.order' || this.model == 'account.move'">
+                <td class="o_td_label">
+                    <label class="o_form_label o_tax_total_label">Conversion Total</label>
+                </td>
+                <td class="o_list_monetary">
+                    <span t-out="formatConversionMonetary(value.conversion_amount_total)"
+                          style="font-size: 1.3em; font-weight: bold; white-space: nowrap;"
+                          class="total"/>
+                </td>
+            </tr>
+        </xpath>
+    </t>
+
+</templates>
