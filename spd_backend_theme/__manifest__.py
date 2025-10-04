@@ -19,7 +19,9 @@
     "images": [
         "static/description/banner.png",
     ],
-    'license':'LGPL-3',
+    'license':'OPL-1',
+    'price':5,
+    'currency':"USD",
     "auto_install": False,
     "installable": True,
 }
