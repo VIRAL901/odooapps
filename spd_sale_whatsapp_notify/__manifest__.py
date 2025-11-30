@@ -8,9 +8,9 @@
         when a Sale Order is confirmed in Odoo 18. It integrates with the WhatsApp 
         module to streamline customer communication.
     """,
-    'author': 'SPD Solutions Pvt. Ltd.',
-    'maintainer': 'SPD Solutions Pvt. Ltd.',
-    'company': 'SPD Solutions Pvt. Ltd.',
+    'author': 'SPD Solutions',
+    'maintainer': 'SPD Solutions',
+    'company': 'SPD Solutions',
     'depends': ['base', 'sale_management', 'whatsapp'],
     'license': 'LGPL-3',
     'installable': True,
