@@ -2,7 +2,7 @@
     'name': 'Auto Generate Leads',
     'version': '15.0.1.0',
     'summary': 'Automatically generate leads based on customer preferences at weekly, monthly, or yearly intervals.',
-    'author': 'SPD Solutions Pvt. Ltd.',
+    'author': 'SPD Solutions',
     'license': 'LGPL-3',
     'category': 'Customer Relationship Management (CRM)',
     'description': """
@@ -24,5 +24,5 @@
     'installable': True,
     'application': False,
     'auto_install': False,
-    'maintainer': 'SPD Solutions Pvt. Ltd.',
+    'maintainer': 'SPD Solutions',
 }

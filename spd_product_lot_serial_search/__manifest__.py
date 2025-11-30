@@ -15,8 +15,8 @@
     "application": False,
     "auto_install": False,
     "sequence": 1,
-    "author": "SPD Solutions Pvt. Ltd.",
-    "maintainer": "SPD Solutions Pvt. Ltd.",
+    "author": "SPD Solutions",
+    "maintainer": "SPD Solutions",
     "images": [
         "static/description/banner.png",
     ],

@@ -2,7 +2,7 @@
     'name': 'Many2many Filter in Task(Calendar View)',
     'version': '15.0.0.1',
     'category': 'Extra Tools',
-    'author': "SPD Solutions Pvt. Ltd.",
+    'author': "SPD Solutions",
     'summary': 'Add Many2many Filter for Assignee in Tasks Calendar View',
     'description': """This module adds a Many2many filter in the task Calendar view. 
         It enhances the user experience by allowing filtering tasks by assignees.""",
