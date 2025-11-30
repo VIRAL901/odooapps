@@ -17,7 +17,7 @@
     'company': 'SPD Solutions Pvt. Ltd.',
     'maintainer': 'SPD Solutions Pvt. Ltd.',
     'license':'OPL-1',
-    'price':5,
+    'price':10,
     'currency':"USD",
     'images': ["static/description/banner.png"],
     "auto_install": False,
