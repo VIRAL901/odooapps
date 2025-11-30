@@ -5,7 +5,7 @@
         Products search by Lot and Serial Number
     """,
     "version": "17.0.1.0.0",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "category": "Inventory/Inventory",
     "depends": ['stock'],
     "data": [
@@ -15,8 +15,8 @@
     "application": False,
     "auto_install": False,
     "sequence": 10,
-    "author": "SPD Solutions Pvt. Ltd.",
-    "maintainer": "SPD Solutions Pvt. Ltd.",
+    "author": "SPD Solutions",
+    "maintainer": "SPD Solutions",
     "images": [
         "static/description/banner.png",
     ],

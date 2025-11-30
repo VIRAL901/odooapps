@@ -1,9 +1,9 @@
 {
     "name": "School Management",
     "version": "18.0.1.0.0",
-    "author": "SPD Solution Pvt. Ltd.",
+    "author": "SPD Solutions",
     "category": "School Management",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "complexity": "easy",
     "summary": "A comprehensive module for managing school operations, including students, teachers, and parents.",
     "description": """

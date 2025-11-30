@@ -2,7 +2,7 @@
     'name': 'Project Snippet',
     'version': '17.0',
     'category': 'Website',
-    'author':'SPD Solution Pvt. Ltd.',
+    'author':'SPD Solutions',
     'summary': "Display and manage project snippets on your website with customizable configurations.",
     'description': """Project Snippet.""",
     'depends': ['website', 'sale_management','project'],

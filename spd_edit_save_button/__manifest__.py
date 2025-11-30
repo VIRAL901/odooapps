@@ -7,9 +7,9 @@
         Users can easily switch between edit mode, save changes, or discard modifications 
         using intuitive buttons directly in the form view.
     """,
-    'author': 'SPD Solutions Pvt. Ltd.',
-    'company': 'SPD Solutions Pvt. Ltd.',
-    'maintainer': 'SPD Solutions Pvt. Ltd.',
+    'author': 'SPD Solutions',
+    'company': 'SPD Solutions',
+    'maintainer': 'SPD Solutions',
     'category': 'Tools',
     'depends': ['base'],
     'assets': {
@@ -19,7 +19,7 @@
         ],
     },
     'images': ['static/description/banner.png'],
-    'license': 'AGPL-3',
+    'license': 'LGPL-3',
     'installable': True,
     'auto_install': False,
     'application': True,

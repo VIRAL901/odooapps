@@ -3,7 +3,7 @@
     'category': 'Tools',
     'summary': 'Configure dynamic record names with custom fields and separators.',
     'version': '17.0.1.0',
-    'author': "SPD Solutions Pvt. Ltd.",
+    'author': "SPD Solutions",
     'description': """
         Dynamic Record Name Configuration
         ==================================
@@ -25,5 +25,5 @@
     'installable': True,
     'auto_install': False,
     'application': True,
-    'maintainer': "SPD Solutions Pvt. Ltd.",
+    'maintainer': "SPD Solutions",
 }

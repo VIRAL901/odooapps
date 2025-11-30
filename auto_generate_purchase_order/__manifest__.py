@@ -2,7 +2,7 @@
     'name': 'Auto Generate Purchase Order',
     'version': '17.0.1.0',
     'summary': 'Automatically generate Purchase Order based on customer preferences at weekly, monthly, or yearly intervals.',
-    'author': 'SPD Solutions Pvt. Ltd.',
+    'author': 'SPD Solutions',
     'license': 'LGPL-3',
     'category': 'Purchase Order',
     'description': """
@@ -26,5 +26,5 @@
     'installable': True,
     'application': False,
     'auto_install': False,
-    'maintainer': 'SPD Solutions Pvt. Ltd.',
+    'maintainer': 'SPD Solutions',
 }

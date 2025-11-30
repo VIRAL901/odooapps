@@ -8,7 +8,7 @@
         improved UI design, and better product configuration. Ideal for businesses looking to streamline
         their sales workflow and provide a better user experience.
     """,
-    'author': 'SPD Solutions Pvt. Ltd.',
+    'author': 'SPD Solutions',
     'depends': ['sale_product_configurator', 'sale_management'],
     'assets': {
         'web.assets_backend': [

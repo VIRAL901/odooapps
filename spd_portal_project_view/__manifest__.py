@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Project Backend View in Portal in Odoo17',
-    'version': '17.0',
+    'version': '17.0.1.0.0',
     'sequence': 1,
     'depends': ['base','project','web','portal','website'],
 
@@ -16,7 +16,7 @@
     - Task View
     """,
     'category': 'Extra Tools',
-    'author': 'SPD Solutions Pvt. Ltd.',
+    'author': 'SPD Solutions',
     'data': [
         'views/project_project_view.xml',
         'views/project_project_sharing_kanban_view.xml',

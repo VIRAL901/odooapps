@@ -7,7 +7,7 @@ Leaflet Map View for Odoo 17
 This module integrates the Leaflet.js library with Odoo 17, allowing you to add a custom map view (`leaflet_map`). The view is perfect for displaying geolocated data with markers on OpenStreetMap.
     """,
     "version": "17.0.1.0",
-    "author": "SPD Solution Pvt. Ltd.",
+    "author": "SPD Solutions",
     "license": "AGPL-3",
     "category": "Extra Tools",
     "depends": [

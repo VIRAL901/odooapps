@@ -3,7 +3,7 @@
     'version': '17.0.1.0',
     'description': 'This module customizes the delivery order to hide the "Add a Line" option.',
     'summary': 'Hides the "Add a Line" option in delivery orders to prevent adding lines manually.',
-    'author': "SPD Solutions Pvt. Ltd.",
+    'author': "SPD Solutions",
     'license': 'LGPL-3',
     'category': 'Inventory/Delivery',
     'depends': [
