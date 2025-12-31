@@ -1,12 +1,32 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Project Backend View in Portal in Odoo17',
+    'name': 'Project Backend View in Portal',
     'version': '17.0.1.0.0',
     'sequence': 1,
     'depends': ['base','project','web','portal','website'],
 
-    'summary': 'Project Backend View in Portal',
+    'summary': 'Allow portal users to access Project and Task backend views directly from the portal.',
     'description': """
+This module allows portal users to access Project and Task backend views
+directly from the Odoo portal, providing a backend-like experience without
+granting full internal user access.
+
+With this module, portal users can view projects and tasks using familiar
+backend interfaces such as list, kanban, and form views, improving visibility,
+collaboration, and transparency.
+
+Key Features:
+• Backend-style Project and Task views for portal users
+• Secure access without converting portal users to internal users
+• Improved project tracking and task monitoring
+• Seamless integration with Odoo Project and Portal modules
+• User-friendly and performance-optimized design
+• Compatible with Odoo Community and Enterprise editions
+
+This module is ideal for businesses that want to give customers, vendors,
+or external stakeholders controlled access to project and task data directly
+from the portal while maintaining system security.
+
     - Project View
     - Portal Project View
     - Project Backed View
@@ -115,5 +135,7 @@
     'installable': True,
     'application': True,
     'auto_install': False,
-    'license': 'LGPL-3',
+    'license': 'OPL-1',
+    "price": 40.00,
+    "currency": "USD",
 }
