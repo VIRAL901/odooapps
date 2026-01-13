@@ -18,8 +18,10 @@
     'data': [
         'data/currency_rate_cron.xml',
         'views/res_config_settings.xml',
-    ],
-    'license': 'LGPL-3',
+    ],      
+    'license': 'OPL-1',
+    'price':5,
+    'currency':'USD',
     'images': ['static/description/banner.png'],
     'installable': True,
     'application': True,
