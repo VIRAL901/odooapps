@@ -27,7 +27,7 @@ This module integrates the Leaflet.js library with Odoo, allowing you to add a c
     ],
     "installable": True,
     "application": False,
-    "price": 50.00,
+    "price": 15.00,
     "currency": "USD",
     "uninstall_hook": "uninstall_hook",
 }
