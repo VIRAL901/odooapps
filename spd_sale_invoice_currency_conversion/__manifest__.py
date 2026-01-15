@@ -1,10 +1,14 @@
 {
     'name': 'Sales and Invoice Multi Currency Converison',
-    'version': '18.0.0.0',
+    'version': '18.0.1.0.0',
     'category': 'Sales',
     'summary': 'Sales and Invoice Multi Currency Converison',
-    'description': """Sales and Invoice Multi Currency Converison""",
-    'depends': ['base','sale_management','accountant'],
+    'description': """Sales and Invoice Multi Currency Conversion
+            multi currency conversion
+            sale multi currency conversion
+            invoice multi currency conversion
+    """,
+    'depends': ['base','sale_management','account'],
     'data': [
         'views/sale_order.xml',
         'views/account_move.xml'
@@ -21,5 +25,7 @@
     'installable': True,
     'application': True,
     'auto_install': False,
-    'license': 'LGPL-3',
+    'license': 'OPL-1',
+    'price': 10,
+    'currency': 'USD',
 }
