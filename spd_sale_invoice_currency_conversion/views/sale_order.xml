@@ -6,7 +6,8 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <field name="payment_term_id" position="after">
-                <field name="conversion_currency_id"/>
+                <field name="conversion_currency_id"
+                       options="{'no_create':True,'no_create_edit':True}"/>
                 <field name="conversion_rate"/>
                 <!-- Don't Remove this field -->
                 <field name="conversion_amount_total" invisible="1"/>
@@ -20,7 +21,7 @@
         <field name="inherit_id" ref="sale.view_quotation_tree"/>
         <field name="arch" type="xml">
             <field name="amount_total" position="after">
-                <field name="conversion_amount_total" />
+                <field name="conversion_amount_total"/>
             </field>
         </field>
     </record>

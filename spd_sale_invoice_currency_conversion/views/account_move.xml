@@ -6,7 +6,8 @@
         <field name="inherit_id" ref="account.view_move_form"/>
         <field name="arch" type="xml">
             <field name="delivery_date" position="after">
-                <field name="conversion_currency_id"/>
+                <field name="conversion_currency_id"
+                       options="{'no_create':True,'no_create_edit':True}"/>
                 <field name="conversion_rate"/>
                 <!-- Don't Remove this field -->
                 <field name="conversion_amount_total" invisible="1"/>
