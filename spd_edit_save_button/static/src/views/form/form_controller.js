@@ -66,14 +66,7 @@ patch(FormController.prototype, {
     },
 
     async beforeLeave() {
-        if (this.model.root.isDirty) {
-            if (confirm("The changes you have made will save Automatically!")) {
-                await this.model.root.save();
-                return true;
-            } else {
-                return false;
-            }
-        }
+        await this.model.root.save();
         return true;
     }
 
