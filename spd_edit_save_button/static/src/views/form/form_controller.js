@@ -1,7 +1,7 @@
 /** @odoo-module **/
+
 import { patch } from "@web/core/utils/patch";
 import { FormController } from "@web/views/form/form_controller";
-import { useService } from "@web/core/utils/hooks";
 
 const originalSetup = FormController.prototype.setup;
 const originalEdit = FormController.prototype.edit; // Note: This might be undefined in standard Odoo
