@@ -35,8 +35,11 @@ editing records in Odoo.
     'company': 'SPD Solutions',
     'maintainer': 'SPD Solutions',
     'images': ['static/description/banner.png'],
-    'depends': ['base'],
+    'depends': ['base', 'web', 'project'],
     'category': 'Tools',
+    'data':[
+        'views/views.xml'
+    ],
     'assets': {
         'web.assets_backend': [
             '/spd_edit_save_button/static/src/views/form/form_controller.xml',
