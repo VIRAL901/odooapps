@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="project_project_form_view_inherit" model="ir.ui.view">
+        <field name="name">project.project.form.view.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="js_class"></attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_task_form_view_inherit" model="ir.ui.view">
+        <field name="name">project.task.form.view.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="js_class"></attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
