@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-
     <t t-inherit="web.FormView" t-inherit-mode="extension">
-
         <!-- After the FIRST "New" button -->
         <xpath expr="(//button[hasclass('o_form_button_create')])[1]" position="after">
             <t t-if="!canEdit and !model.root.isInEdition">
@@ -30,7 +28,6 @@
                 </div>
             </t>
         </xpath>
-
         <!-- After the SECOND "New" button -->
         <xpath expr="(//button[hasclass('o_form_button_create')])[2]" position="after">
             <t t-if="!canEdit and !model.root.isInEdition">
@@ -58,7 +55,5 @@
                 </div>
             </t>
         </xpath>
-
     </t>
-
 </templates>
