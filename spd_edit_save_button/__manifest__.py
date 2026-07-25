@@ -1,7 +1,7 @@
 {
-    'name': 'Show Edit Save Button On Form View',
+    'name': 'Show Edit Save Button On Form View | Show Edit Save Buttons On Form View | Edit and Save Button',
     'version': '19.0.1.0.0',
-    'summary': 'Show Edit Save Button On Form View',
+    'summary': 'Show Edit Save Button On Form View. Classic Edit & Save Mode for Odoo | Edit Button | Show Edit Button | Show Edit Save Button On Form View | Edit Button In Form | Edit Save Button In Odoo | Edit Save Button | Edit Form Odoo | Show Edit Save Button On Form View | Classic Edit Save Workflow | Ninja Odoo Form Edit | Classic Edit & Save Mode for Odoo | Edit Save Button Like Odoo 15 | Edit Save Mode (Restrict Auto Edit-Save)',
     'description': """
 This module enhances the Odoo user experience by introducing dedicated **Edit**, **Save**, 
 and **Discard** buttons directly on form views.
