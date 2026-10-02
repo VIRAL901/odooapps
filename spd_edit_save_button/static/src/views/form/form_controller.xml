@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Odoo 20: buttons live in web.FormView.Buttons (called from control-panel-buttons slot) -->
+    <t t-inherit="web.FormView.Buttons" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('o_form_button_create')]" position="after">
+            <t t-if="!this.model.root.isInEdition and this.canEdit">
+                <button type="button"
+                        class="btn btn-outline-primary o_form_button_edit"
+                        t-on-click="() => this.edit()"
+                        data-hotkey="a">
+                    Edit
+                </button>
+            </t>
+            <t t-if="this.model.root.isInEdition">
+                <div class="o_form_buttons_edit d-inline-flex gap-1 ms-1">
+                    <button type="button"
+                            class="btn btn-primary o_form_button_save"
+                            t-on-click="() => this.saveButtonClicked()"
+                            data-hotkey="s"
+                            title="Save">
+                        Save
+                    </button>
+                    <button type="button"
+                            class="btn btn-secondary o_form_button_cancel"
+                            t-on-click="() => this.discard()"
+                            data-hotkey="j"
+                            title="Discard">
+                        Discard
+                    </button>
+                </div>
+            </t>
+        </xpath>
+    </t>
+
+    <!-- Hide the default FormStatusIndicator (auto save/discard UI) -->
+    <t t-inherit="web.FormView" t-inherit-mode="extension">
+        <xpath expr="//t[@t-set-slot='control-panel-status-indicator']" position="replace">
+            <t t-set-slot="control-panel-status-indicator"/>
+        </xpath>
+    </t>
+
+</templates>
